@@ -5,7 +5,6 @@ import MuiAccordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import MuiAccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
-import Nav from "./Nav";
 import Navbar from "./NavBar";
 
 const Accordion = styled((props) => (
@@ -55,7 +54,7 @@ export default function Faq() {
     <div>
       <Navbar />
       <div>
-        <h1 className="faq1">Preguntas Frequentes (FAQ)</h1>
+        <h1 className=" mb-8">Preguntas Frequentes (FAQ)</h1>
       </div>
       <Accordion
         expanded={expanded === "panel1"}

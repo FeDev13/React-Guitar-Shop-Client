@@ -87,6 +87,8 @@ header .nav-btn {
     margin: 1.5rem;
 }
 
+ /*responsive navbar*/
+ 
 @media only screen and (max-width: 1024px) {
     header .nav-btn {
 		visibility: visible;
@@ -123,7 +125,7 @@ header .nav-btn {
 	}
 
 	nav a {
-		font-size: 1.5rem;
+		font-size: 1rem;
 	}
     input {
         margin-top: 1px;

@@ -1,6 +1,6 @@
 import React from "react";
 import list from "../data";
-
+import "../styles/slideshow.css";
 import { NavLink } from "react-router-dom";
 
 const Slideshow = () => {
@@ -11,10 +11,7 @@ const Slideshow = () => {
           <div className="col">
             <h4 className=" text-center uppercase mt-8">Los mas pedidos</h4>
             <NavLink to="/faq">
-              <button className="md: bg-black text-white m-20 rounded-md p-3">
-                {" "}
-                FAQ
-              </button>
+              <button className=" faq"> FAQ</button>
             </NavLink>
           </div>
         </div>
