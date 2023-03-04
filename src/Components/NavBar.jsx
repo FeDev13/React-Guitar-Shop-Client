@@ -16,7 +16,7 @@ const Navbar = ({ size, setShow }) => {
         <nav ref={navRef}>
           <NavLink to="/cart">
             <button
-              className="bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded"
+              className=" md: bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded "
               id="boton"
             >
               Carrito
