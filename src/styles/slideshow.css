@@ -29,11 +29,4 @@ h4{
     border-radius: 5px;
     padding: 10px;
 }
-@media (max-width: 715px) {
-    .faq {
-    margin-left: 15rem;
-    margin-right: 20rem;
-    }
-    
-  }
 
