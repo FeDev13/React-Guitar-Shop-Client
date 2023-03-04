@@ -49,11 +49,11 @@
 }
 
 .card {
-  width: 250px;
+  width: 250px; 
   box-shadow: 0 0 10px #000000;
   border-radius: 5px;
   padding: 5px;
-  margin: 0px 25px 25px 0;
+  margin: 20px 25px 25px 20px;
 }
 .card:hover {
   transform: translate(-25px, -25px);

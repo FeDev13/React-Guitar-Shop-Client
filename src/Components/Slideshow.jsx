@@ -1,6 +1,6 @@
 import React from "react";
 import list from "../data";
-import "../styles/slideshow.css";
+
 import { NavLink } from "react-router-dom";
 
 const Slideshow = () => {
@@ -9,9 +9,7 @@ const Slideshow = () => {
       <div className="cards1">
         <div className="row">
           <div className="col">
-            <h4 className="title" color="black">
-              Los mas pedidos
-            </h4>
+            <h4 className=" text-center uppercase mt-8">Los mas pedidos</h4>
             <NavLink to="/faq">
               <button className="md: bg-black text-white m-20 rounded-md p-3">
                 {" "}
@@ -20,6 +18,7 @@ const Slideshow = () => {
             </NavLink>
           </div>
         </div>
+
         {list.map((values) => {
           // filtra por propiedad rating del producto y lo verifica con if
           const { id, title, price, image, rating } = values;
@@ -27,7 +26,7 @@ const Slideshow = () => {
             return (
               <>
                 <div className="card" key={id}>
-                  <div className="card-header">
+                  <div className="w-full">
                     <img src={image} alt={title} />
                   </div>
                   <div className="card-body">

@@ -60,7 +60,7 @@ export default function Login() {
             className="max-w-[400px] w-full mx-auto rounded-lg bg-gray-900 p-8 px-8"
             onSubmit={handleSubmit}
           >
-            <h2 className="text-4xl dark:text-white font-bold text-center">
+            <h2 className="text-4xl  font-bold text-center text-slate-300">
               Login
             </h2>
             <div className="flex flex-col text-gray-400 py-2">

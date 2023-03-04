@@ -19,7 +19,7 @@ const Search = (item, handleClick) => {
             }}
           />
         </div>
-        <div className="grid grid-cols-3 mt-0 mr-auto justify-center items-center">
+        <div className=" md:grid md:grid-cols-2 mt-0 mr-auto justify-center items-center sm: grid-cols-1">
           {list
             .filter((val) => {
               if (searchTerm === "") {
