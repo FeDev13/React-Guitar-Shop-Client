@@ -1,5 +1,4 @@
 import React from "react";
-import "../styles/search.css";
 import list from "../data";
 import { useState } from "react";
 
@@ -8,10 +7,10 @@ const Search = (item, handleClick) => {
 
   return (
     <>
-      <div className="templateContainer">
-        <div className="searchInput_Container">
+      <div className="">
+        <div className="flex items-center justify-center mt-0 mr-auto">
           <input
-            className="input"
+            className="w-1/2 rounded-md bg-slate-100 p-2"
             id="searchInput"
             type="text"
             placeholder="Buscar"
@@ -20,7 +19,7 @@ const Search = (item, handleClick) => {
             }}
           />
         </div>
-        <div className="template_Container">
+        <div className="grid grid-cols-3 mt-0 mr-auto justify-center items-center">
           {list
             .filter((val) => {
               if (searchTerm === "") {
@@ -33,10 +32,12 @@ const Search = (item, handleClick) => {
                 val.title.toLowerCase().includes(searchTerm.toLowerCase()) //poner .map antes del return
               ) {
                 return (
-                  <div className="template" key={val.id}>
-                    <img src={val.image} alt="" />
+                  <div className=" bg-white m-8 pt-0 pr-8" key={val.id}>
+                    <img className=" h-60" src={val.image} alt="" />
                     <h3>{val.title}</h3>
-                    <button className="detail">Detalles</button>
+                    <button className=" bg-black text-white rounded p-1 mt-8">
+                      Detalles
+                    </button>
                   </div>
                 );
               }
@@ -46,10 +47,12 @@ const Search = (item, handleClick) => {
                 return <></>;
               } else {
                 return (
-                  <div className="template" key={val.id}>
-                    <img src={val.image} alt="" />
+                  <div className="bg-white m-8 pt-0 pr-8" key={val.id}>
+                    <img className=" h-60" src={val.image} alt="" />
                     <h3>{val.title}</h3>
-                    <button className="detail">Detalles</button>
+                    <button className="bg-black text-white rounded p-1 mt-8">
+                      Detalles
+                    </button>
                   </div>
                 );
               }
