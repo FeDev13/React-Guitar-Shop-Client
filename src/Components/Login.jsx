@@ -28,7 +28,7 @@ export default function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3001/auth/login";
+      const url = "https://reactguitarshop-api.onrender.com/auth/login";
       const { data: res } = await Axios.post(url, data);
       localStorage.setItem("token", res.data);
       mostrarAlert();

@@ -3,7 +3,7 @@ import Axios from "axios";
 import { useState } from "react";
 
 const FormPostGuitar = () => {
-  const url = "http://localhost:3001/productos/guitarra/";
+  const url = "https://reactguitarshop-api.onrender.com/productos/guitarra/";
   const [info, setInfo] = useState({
     nombre: "",
     descripcion: "",

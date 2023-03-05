@@ -14,7 +14,7 @@ const ListProdTest = () => {
 
   const fetchData = async () => {
     const response = await Axios.get(
-      "http://localhost:3001/productos/guitarras"
+      "https://reactguitarshop-api.onrender.com/productos/guitarras"
     );
     setdata(response.data);
     console.log(data);

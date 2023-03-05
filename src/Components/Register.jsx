@@ -33,7 +33,7 @@ export const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = "http://localhost:3001/users/user";
+      const url = "https://reactguitarshop-api.onrender.com/users/user";
       const { data: res } = await Axios.post(url, data);
       navigate("/login");
       mostrarAlert();
