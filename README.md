@@ -1,5 +1,5 @@
 # React-Guitar-Shop
-A JS fullstack app project that simulates a real Guitar Shop using MERN stack 
+A JS fullstack app project that simulates a real Guitar Shop using MERN stack an deployed via render. Check it out on https://reactguitarshop.onrender.com/
 
 ### Frontend and Backend technologies
 
