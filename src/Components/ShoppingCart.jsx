@@ -19,18 +19,18 @@ const ShoppingCart = () => {
   return (
     <>
       <Navbar />
-      <div className="carrito">
+      <div className="flex flex-col gap-8 p-32 w-1/2">
         {state.map((producto, index) => {
           return (
-            <div className="carro" key={index}>
-              <img src={producto.imagen} alt="" />
+            <div className="flex justify-between items-center" key={index}>
+              <img className=" w-32 h-32" src={producto.imagen} alt="" />
               <p>{producto.nombre}</p>
               <p> $ {producto.quantity * producto.precio}</p>
-              <div className="quantity">
+              <div className="flex flex-row items-center m-8">
                 <button
                   onClick={() => dispatch({ type: "SUMA", payload: producto })}
                 >
-                  <AddIcon></AddIcon>
+                  <AddIcon className=" m-8"></AddIcon>
                 </button>
                 <p>{producto.quantity}</p>
                 <button
@@ -42,7 +42,7 @@ const ShoppingCart = () => {
                     }
                   }}
                 >
-                  <RemoveIcon></RemoveIcon>
+                  <RemoveIcon className=" m-8"></RemoveIcon>
                 </button>
               </div>
               <Button
@@ -56,10 +56,12 @@ const ShoppingCart = () => {
           );
         })}
         {state.length > 0 && (
-          <div className="total">
+          <div className=" text-right border-t-2">
             <h2>Total $ {total}</h2>
             <NavLink to="/compra">
-              <button className="comprar">Finalizar compra</button>
+              <button className=" bg-lime-800 p-1 rounded-md h-full text-white">
+                Finalizar compra
+              </button>
             </NavLink>
           </div>
         )}

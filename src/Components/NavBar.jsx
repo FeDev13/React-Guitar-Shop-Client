@@ -57,6 +57,12 @@ const Navbar = ({ size, setShow }) => {
               Registrarse
             </button>
           </NavLink>
+          <NavLink to="/faq">
+            <button className=" bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded ml-8">
+              {" "}
+              FAQ
+            </button>
+          </NavLink>
         </nav>
         <button className="nav-btn" onClick={showNavbar}>
           <FaBars />

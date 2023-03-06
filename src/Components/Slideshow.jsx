@@ -7,14 +7,7 @@ const Slideshow = () => {
   return (
     <>
       <div className="cards1">
-        <div className="row">
-          <div className="col">
-            <h4 className=" text-center uppercase mt-8">Los mas pedidos</h4>
-            <NavLink to="/faq">
-              <button className=" faq"> FAQ</button>
-            </NavLink>
-          </div>
-        </div>
+        <h4 className=" text-center uppercase m-8">Los mas pedidos</h4>
 
         {list.map((values) => {
           // filtra por propiedad rating del producto y lo verifica con if
