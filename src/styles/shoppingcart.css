@@ -9,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
   }
-  .carrito .carro img {
+  .carrito .carro img { 
     width: 120px;
     height: 120px;
   }

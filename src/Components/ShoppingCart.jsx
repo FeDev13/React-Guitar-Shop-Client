@@ -19,13 +19,16 @@ const ShoppingCart = () => {
   return (
     <>
       <Navbar />
-      <div className="flex flex-col gap-8 p-32 w-1/2">
+      <div className=" lg:flex lg:flex-col lg:gap-8 lg:p-32 lg:w-full sm:grid-cols-1">
         {state.map((producto, index) => {
           return (
             <div className="flex justify-between items-center" key={index}>
               <img className=" w-32 h-32" src={producto.imagen} alt="" />
-              <p>{producto.nombre}</p>
-              <p> $ {producto.quantity * producto.precio}</p>
+              <p className=" text-sm">{producto.nombre}</p>
+              <p className=" text-xs flex items-end ">
+                {" "}
+                $ {producto.quantity * producto.precio}
+              </p>
               <div className="flex flex-row items-center m-8">
                 <button
                   onClick={() => dispatch({ type: "SUMA", payload: producto })}
@@ -46,6 +49,7 @@ const ShoppingCart = () => {
                 </button>
               </div>
               <Button
+                className=" mx-0"
                 variant="contained"
                 color="error"
                 onClick={() => dispatch({ type: "QUITAR", payload: producto })}
