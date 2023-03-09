@@ -16,7 +16,7 @@ const Navbar = ({ size, setShow }) => {
         <nav ref={navRef}>
           <NavLink to="/cart">
             <button
-              className=" md: bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded "
+              className=" md: bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded w-auto "
               id="boton"
             >
               Carrito
@@ -24,7 +24,7 @@ const Navbar = ({ size, setShow }) => {
           </NavLink>
           <NavLink to="/login">
             <button
-              className="bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded w-auto"
               id="boton"
             >
               Login
@@ -32,7 +32,7 @@ const Navbar = ({ size, setShow }) => {
           </NavLink>
           <NavLink to="/products">
             <button
-              className="bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded w-auto"
               id="boton"
             >
               Comprar
@@ -40,7 +40,7 @@ const Navbar = ({ size, setShow }) => {
           </NavLink>
           <NavLink to="/">
             <button
-              className="bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded w-auto"
               id="boton"
             >
               Home
@@ -51,14 +51,14 @@ const Navbar = ({ size, setShow }) => {
           </button>
           <NavLink to="/register">
             <button
-              className="bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded"
+              className="bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded w-auto"
               id="boton"
             >
               Registrarse
             </button>
           </NavLink>
           <NavLink to="/faq">
-            <button className=" bg-orange-600 hover:bg-black-700 text-white font-bold py-2 px-4 rounded ml-8">
+            <button className=" bg-black hover:bg-black-700 text-white font-bold py-2 px-4 rounded ml-8 w-auto">
               {" "}
               FAQ
             </button>

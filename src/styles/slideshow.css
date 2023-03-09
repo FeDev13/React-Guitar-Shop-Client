@@ -18,14 +18,7 @@ h4{
     
   }
 
-  @media (min-width:716px)and (max-width: 920px) {
-    .cards1 {
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      align-items: end;
-    }
-    
-  }
+
 
 
 .faq {
