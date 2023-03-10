@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { CartContext } from "../Contexts/Context";
 import Navbar from "./NavBar";
-import shoppingcart from "../styles/shoppingcart.css";
+
 import { Button } from "@mui/material";
 import { NavLink } from "react-router-dom";
 import AddIcon from "@mui/icons-material/Add";
@@ -19,10 +19,10 @@ const ShoppingCart = () => {
   return (
     <>
       <Navbar />
-      <div className=" lg:flex lg:flex-col lg:gap-8 lg:p-32 lg:w-full sm:grid-cols-1">
+      <div className="grid grid-cols-1">
         {state.map((producto, index) => {
           return (
-            <div className="flex justify-between items-center" key={index}>
+            <div className=" flex flex-col mt-4 ml-8" key={index}>
               <img className=" w-32 h-32" src={producto.imagen} alt="" />
               <p className=" text-sm">{producto.nombre}</p>
               <p className=" text-xs flex items-end ">
@@ -45,11 +45,11 @@ const ShoppingCart = () => {
                     }
                   }}
                 >
-                  <RemoveIcon className=" m-8"></RemoveIcon>
+                  <RemoveIcon className=" m-4 h-8"></RemoveIcon>
                 </button>
               </div>
               <Button
-                className=" mx-0"
+                className=" mx-0 h-auto w-1/5"
                 variant="contained"
                 color="error"
                 onClick={() => dispatch({ type: "QUITAR", payload: producto })}
@@ -60,10 +60,10 @@ const ShoppingCart = () => {
           );
         })}
         {state.length > 0 && (
-          <div className=" text-right border-t-2">
+          <div className=" text-left border-t-2 ml-4 mt-8">
             <h2>Total $ {total}</h2>
             <NavLink to="/compra">
-              <button className=" bg-lime-800 p-1 rounded-md h-full text-white">
+              <button className=" bg-lime-800 p-1 rounded-md h-1/2l text-white">
                 Finalizar compra
               </button>
             </NavLink>
