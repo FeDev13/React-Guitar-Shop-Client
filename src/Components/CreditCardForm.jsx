@@ -6,8 +6,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/creditform.css";
 import Cards from "react-credit-cards";
 import "react-credit-cards/es/styles-compiled.css";
+import Swal from "sweetalert2";
 
 const CreditCardForm = () => {
+  const mostrarCompra = () => {
+    Swal.fire({
+      title: "Seguro que desea terminar con la compra?",
+      text: "Recibira un correo con la confirmacion",
+      icon: "question",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, confirmar compra!",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire("Hecho!", "Su compra ha sido realizada.", "success");
+      }
+    });
+  };
   const { handleChange, handleFocus, handleSubmit, values, errors } =
     useForms();
   return (
@@ -117,10 +133,12 @@ const CreditCardForm = () => {
                 </Col>
               </Row>
               <Button
+                className=" mt-8"
                 size={"block"}
                 data-testid="validateButton"
                 id="validateButton"
                 type="submit"
+                onClick={mostrarCompra}
               >
                 Confirmar
               </Button>
